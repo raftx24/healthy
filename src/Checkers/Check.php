@@ -46,7 +46,7 @@ abstract class Check
         if(!Storage::exists($path)){
             file_put_contents(Storage::path($path),date("Y-m-d H:i:s"));
             Storage::put($path,date("Y-m-d H:i:s"));
-            chmod(Storage::path($path),777);
+            chmod(Storage::path($path),0777);
         }
         return $path;
     }
