@@ -4,7 +4,6 @@
 namespace Raftx24\Healthy\Console\Commands;
 
 
-use Raftx24\Healthy\Http\Controllers\HealthController;
 use Raftx24\Healthy\Support\StorageHelper;
 use Storage;
 
@@ -43,8 +42,6 @@ class PrinterCheckCommand extends Command
      */
     public function handle()
     {
-        echo microtime(true).PHP_EOL;
-        echo (new HealthController())->ping();
         StorageHelper::createStorageFolder("app/health");
         $path = "health/schedule";
         $date = date("Y-m-d H:i:s");
