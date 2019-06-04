@@ -1,0 +1,24 @@
+{
+    "name": "raftx24/healthy",
+    "description": "Check Health of our microservices",
+    "type": "library",
+    "authors": [
+        {
+            "name": "reza",
+            "email": "raftx24@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Raftx24\\Healthy\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Raftx24\\Healthy\\ServiceProvider"
+            ]
+        }
+    },
+    "require": {}
+}
