@@ -5,6 +5,8 @@ namespace Raftx24\Healthy;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 use Raftx24\Healthy\Console\Commands\PrinterCheckCommand;
+use Raftx24\Healthy\Console\Commands\QueueHealthCommand;
+use Raftx24\Healthy\Console\Commands\ScheduleHealthCommand;
 
 class ServiceProvider extends IlluminateServiceProvider
 {
@@ -74,6 +76,8 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         $this->commands([
             PrinterCheckCommand::class,
+            QueueHealthCommand::class,
+            ScheduleHealthCommand::class,
         ]);
     }
 
